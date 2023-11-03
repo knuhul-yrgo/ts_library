@@ -1,5 +1,7 @@
 package se.yrgo.libraryapp.services;
 
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Optional;
 import javax.inject.Inject;
 
@@ -30,5 +32,21 @@ public class UserService {
             return Optional.empty();
         }
         return Optional.of(user.getId());
+    }
+
+    public boolean register(String name, String realname, String password) {
+        String passwordHash = encoder.encode(password);
+
+        // handle names like Ian O'Toole
+        realname = realname.replace("'", "\\'");
+
+        return userDao.persistUser(name, realname, passwordHash);
+    }
+
+    public boolean isNameAvailable(String name) {
+        if (name == null || name.trim().length() < 3) {
+            return false;
+        }
+        return userDao.userNotInDb(name);
     }
 }
