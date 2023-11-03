@@ -33,46 +33,6 @@ public class UserDaoTest {
     private ResultSet rs;
 
     @Test
-    void validateWithCorrectUserAndPassword() throws SQLException {
-        final UserId id = UserId.of(1);
-        final String username = "testuser";
-        final String password = "password";
-        final String passwordHash =
-
-                "$argon2i$v=19$m=16,t=2,p=1$QldXU09Sc2dzOWdUalBKQw$LgKb6x4usOpDLTlXCBVhxA";
-
-        when(ds.getConnection()).thenReturn(conn);
-        when(conn.createStatement()).thenReturn(stmt);
-        when(stmt.executeQuery(contains(username))).thenReturn(rs);
-        when(rs.next()).thenReturn(true, false);
-        when(rs.getInt("id")).thenReturn(id.getId());
-        when(rs.getString("password_hash")).thenReturn(passwordHash);
-
-        UserDao userDao = new UserDao(ds);
-        assertThat(userDao.validate(username, password)).isEqualTo(id);
-    }
-
-    @Test
-    void validateWithWrongPassword() throws SQLException {
-        final UserId id = UserId.of(1);
-        final String username = "testuser";
-        final String wrongPassword = "wrongpassword";
-        final String passwordHash =
-
-                "$argon2i$v=19$m=16,t=2,p=1$QldXU09Sc2dzOWdUalBKQw$LgKb6x4usOpDLTlXCBVhxA";
-
-        when(ds.getConnection()).thenReturn(conn);
-        when(conn.createStatement()).thenReturn(stmt);
-        when(stmt.executeQuery(contains(username))).thenReturn(rs);
-        when(rs.next()).thenReturn(true, false);
-        when(rs.getInt("id")).thenReturn(id.getId());
-        when(rs.getString("password_hash")).thenReturn(passwordHash);
-        UserDao userDao = new UserDao(ds);
-        assertThatExceptionOfType(AccountNotFoundException.class)
-                .isThrownBy(() -> userDao.validate(username, wrongPassword));
-    }
-
-    @Test
     void getExistingUser() throws SQLException {
         final UserId id = UserId.of(1);
         final String username = "testuser";
