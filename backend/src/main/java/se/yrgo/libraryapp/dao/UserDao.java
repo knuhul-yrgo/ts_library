@@ -44,20 +44,22 @@ public class UserDao {
         throw new AccountNotFoundException("Unable to find user " + user);
     }
 
-    public Optional<User> get(UserId id) {
+    public Optional<User> get(String username) {
         try (Connection conn = ds.getConnection();
                 Statement stmt = conn.createStatement();
-                ResultSet rs = stmt
-                        .executeQuery("SELECT user, realname FROM user WHERE id = '" + id + "'")) {
-            if (rs.next()) {
-                String name = rs.getString("user");
+                ResultSet rs = stmt.executeQuery(
+                        "SELECT id, realname, password_hash FROM user WHERE user = '"
+                                + username + "'")) {
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                UserId userId = UserId.of(id);
                 String realname = rs.getString("realname");
-                return Optional.of(new User(id, name, realname));
+                String passwordHash = rs.getString("password_hash");
+                return Optional.of(new User(userId, username, realname, passwordHash));
             }
         } catch (SQLException ex) {
-            logger.error("Unable to fetch user " + id, ex);
+            logger.error("Unable to get user " + username, ex);
         }
-
         return Optional.empty();
     }
 
@@ -108,8 +110,7 @@ public class UserDao {
             if (userId.getId() > 0 && addToUserRole(conn, userId)) {
                 conn.commit();
                 return true;
-            }
-            else {
+            } else {
                 conn.rollback();
                 return false;
             }
