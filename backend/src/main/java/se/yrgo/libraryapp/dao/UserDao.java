@@ -8,12 +8,12 @@ import java.sql.Statement;
 import java.util.Optional;
 import javax.inject.Inject;
 import javax.sql.DataSource;
-import org.pac4j.core.exception.AccountNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 import se.yrgo.libraryapp.entities.User;
 import se.yrgo.libraryapp.entities.UserId;
+import se.yrgo.libraryapp.services.UserService;
 
 public class UserDao {
     private static Logger logger = LoggerFactory.getLogger(UserDao.class);
@@ -24,50 +24,26 @@ public class UserDao {
         this.ds = ds;
     }
 
-    public UserId validate(String user, String password) {
+    public Optional<User> get(String username) {
         try (Connection conn = ds.getConnection();
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(
-                        "SELECT id, password_hash FROM user WHERE user = '" + user + "'")) {
+                        "SELECT id, realname, password_hash FROM user WHERE user = '"
+                                + username + "'")) {
             while (rs.next()) {
                 int id = rs.getInt("id");
-                String passwordHash = rs.getString("password_hash");
-                Argon2PasswordEncoder encoder = new Argon2PasswordEncoder();
-                if (encoder.matches(password, passwordHash)) {
-                    return UserId.of(id);
-                }
-            }
-        } catch (SQLException ex) {
-            throw new AccountNotFoundException(ex);
-        }
-
-        throw new AccountNotFoundException("Unable to find user " + user);
-    }
-
-    public Optional<User> get(UserId id) {
-        try (Connection conn = ds.getConnection();
-                Statement stmt = conn.createStatement();
-                ResultSet rs = stmt
-                        .executeQuery("SELECT user, realname FROM user WHERE id = '" + id + "'")) {
-            if (rs.next()) {
-                String name = rs.getString("user");
+                UserId userId = UserId.of(id);
                 String realname = rs.getString("realname");
-                return Optional.of(new User(id, name, realname));
+                String passwordHash = rs.getString("password_hash");
+                return Optional.of(new User(userId, username, realname, passwordHash));
             }
         } catch (SQLException ex) {
-            logger.error("Unable to fetch user " + id, ex);
+            logger.error("Unable to get user " + username, ex);
         }
-
         return Optional.empty();
     }
 
-    public boolean register(String name, String realname, String password) {
-        Argon2PasswordEncoder encoder = new Argon2PasswordEncoder();
-        String passwordHash = encoder.encode(password);
-
-        // handle names like Ian O'Toole
-        realname = realname.replace("'", "\\'");
-
+    public boolean persistUser(String name, String realname, String passwordHash) {
         try (Connection conn = ds.getConnection()) {
             conn.setAutoCommit(false);
 
@@ -78,11 +54,7 @@ public class UserDao {
         }
     }
 
-    public boolean isNameAvailable(String name) {
-        if (name == null || name.trim().length() < 3) {
-            return false;
-        }
-
+    public boolean userNotInDb(String name) {
         String query = "SELECT id FROM user WHERE user = ?";
         try (Connection conn = ds.getConnection();
                 PreparedStatement ps = conn.prepareStatement(query)) {
@@ -108,8 +80,7 @@ public class UserDao {
             if (userId.getId() > 0 && addToUserRole(conn, userId)) {
                 conn.commit();
                 return true;
-            }
-            else {
+            } else {
                 conn.rollback();
                 return false;
             }

@@ -21,7 +21,7 @@ public class UserController {
     @Path("/{id}")
     public User getUser(@PathParam String id) {
         try {
-            var user = userDao.get(UserId.of(id));
+            var user = userDao.get(id);
             return user.orElse(null);
         } catch (NumberFormatException ex) {
             return null;
