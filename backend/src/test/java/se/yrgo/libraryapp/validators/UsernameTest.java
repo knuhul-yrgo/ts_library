@@ -15,7 +15,7 @@ public class UsernameTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = { "knu,t", "början", "hej/nej", "<hej>", "hej svejs" })
+    @ValueSource(strings = { "knu,t", "början", "hej/nej", "<hej>", "hej svejs", "    " })
     void incorrectUsernameCharacters(String username) {
         assertThat(Username.validate(username)).isFalse();
     }
