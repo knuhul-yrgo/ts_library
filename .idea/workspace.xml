@@ -4,18 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad4a840a-0e33-4fdd-8463-55198feb676f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/KnutSamsonHultgrenInl1.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/9/f9590cd73598b6f2427c8b1327d922c50d1dc504" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/9/f9590cd73598b6f2427c8b1327d922c50d1dc504" beforeDir="false" />
+    <list default="true" id="26f5e262-21f5-4214-b03f-e8c407cf6625" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/se/yrgo/libraryapp/dao/UserDaoIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3fc6081b6bb8e926dd5db930f61642a994d2c567" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/f/3fc6081b6bb8e926dd5db930f61642a994d2c567" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/ts_library.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ts_library.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/libraryapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/libraryapp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -27,29 +36,71 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2Xqdul8fB89CR0vI9XHY7bwHObf" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2YRj5HGxFUtNd70Pp1c6bqYwxmV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RunManager" selected="JUnit.UserDaoIntegrationTest">
+    <configuration name="UserDaoIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="libraryapp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.yrgo.libraryapp.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.yrgo.libraryapp.dao" />
+      <option name="MAIN_CLASS_NAME" value="se.yrgo.libraryapp.dao.UserDaoIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="libraryapp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.yrgo.libraryapp.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.yrgo.libraryapp.dao" />
+      <option name="MAIN_CLASS_NAME" value="se.yrgo.libraryapp.dao.UserDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="libraryapp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.yrgo.libraryapp.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.yrgo.libraryapp.services" />
+      <option name="MAIN_CLASS_NAME" value="se.yrgo.libraryapp.services.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UsernameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="libraryapp" />
       <extension name="coverage">
@@ -67,6 +118,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDaoIntegrationTest" />
+        <item itemvalue="JUnit.UserDaoTest" />
+        <item itemvalue="JUnit.UserServiceTest" />
         <item itemvalue="JUnit.UsernameTest" />
       </list>
     </recent_temporary>
@@ -74,21 +128,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ad4a840a-0e33-4fdd-8463-55198feb676f" name="Changes" comment="" />
-      <created>1699360772902</created>
+      <changelist id="26f5e262-21f5-4214-b03f-e8c407cf6625" name="Changes" comment="" />
+      <created>1700495100728</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1699360772902</updated>
-      <workItem from="1699360775665" duration="1896000" />
-      <workItem from="1700147111231" duration="1491000" />
-      <workItem from="1700149161406" duration="954000" />
+      <updated>1700495100728</updated>
+      <workItem from="1700495101938" duration="2352000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

@@ -13,6 +13,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.radcortez.flyway:flyway-junit5-extension:1.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.flywaydb:flyway-core:7.5.1" level="project" />
     <orderEntry type="library" name="Maven: io.jooby:jooby-netty:2.15.1" level="project" />
     <orderEntry type="library" name="Maven: io.jooby:jooby:2.15.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
@@ -35,7 +37,6 @@
     <orderEntry type="library" name="Maven: io.jooby:jooby-hikari:2.15.1" level="project" />
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:4.0.3" level="project" />
     <orderEntry type="library" name="Maven: io.jooby:jooby-flyway:2.15.1" level="project" />
-    <orderEntry type="library" name="Maven: org.flywaydb:flyway-core:7.5.1" level="project" />
     <orderEntry type="library" name="Maven: io.jooby:jooby-guice:2.15.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.inject:guice:5.1.0" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
@@ -81,6 +82,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: com.h2database:h2:1.4.200" level="project" />
   </component>
   <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="808e69a2-dd1c-4239-a16d-cc760f8fd6e3" />
+    <option name="uniqueId" value="99e85dd4-8827-49f6-a072-ee89510d64b0" />
   </component>
 </module>
