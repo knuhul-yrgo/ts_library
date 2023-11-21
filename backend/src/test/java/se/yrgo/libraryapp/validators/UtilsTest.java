@@ -14,4 +14,11 @@ public class UtilsTest {
         assertThat(filteredString).isEqualTo(expectedString);
     }
 
+    @ParameterizedTest
+    @CsvFileSource(resources = "/util-clean-and-unleet.csv", numLinesToSkip = 1)
+    void cleanAndUnLeetFiltersCorrectly(String stringToCheck, String expectedString) {
+        String filteredString = Utils.cleanAndUnLeet(stringToCheck);
+        assertThat(filteredString).isEqualTo(expectedString);
+    }
+
 }
