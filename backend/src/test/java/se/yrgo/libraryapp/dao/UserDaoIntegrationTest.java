@@ -8,6 +8,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Tag;
 import com.radcortez.flyway.test.annotation.H2;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import se.yrgo.libraryapp.entities.User;
 import se.yrgo.libraryapp.entities.UserId;
 
@@ -36,5 +38,16 @@ public class UserDaoIntegrationTest {
 
         assertThat(maybeUser).isPresent();
         assertThat(maybeUser.get().getId()).isEqualTo(userId);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = { "l@sse", "k-n-u-t", "why.Not", "lass3", "SM_ART" })
+    void persistUser(String username) {
+        UserDao userDao = new UserDao(ds);
+        userDao.persistUser(username, "Bosse", "xxxxxxxxx");
+        Optional<User> maybeUser = userDao.get(username);
+
+        assertThat(maybeUser).isPresent();
+        assertThat(maybeUser.get().getName()).isEqualTo(username);
     }
 }
