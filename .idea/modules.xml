@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/backend/libraryapp.iml" filepath="$PROJECT_DIR$/backend/libraryapp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/ts_library.iml" filepath="$PROJECT_DIR$/.idea/ts_library.iml" />
     </modules>
   </component>
 </project>
