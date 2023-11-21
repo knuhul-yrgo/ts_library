@@ -1,0 +1,5 @@
+str1, str2, expected
+a b c, a b c, true
+a1b2c!, abc, true
+123, 123, false
+abcd, abc, false
