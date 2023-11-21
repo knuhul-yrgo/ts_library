@@ -50,4 +50,20 @@ public class UserDaoIntegrationTest {
         assertThat(maybeUser).isPresent();
         assertThat(maybeUser.get().getName()).isEqualTo(username);
     }
+
+    @Test
+    void userNotInDbReturnsTrue() {
+        final String userNotInDb = "notAPerson";
+        UserDao userDao = new UserDao(ds);
+        assertThat(userDao.userNotInDb(userNotInDb)).isTrue();
+    }
+
+    @Test
+    void userInDbReturnsFalse() {
+        final String userInDb = "test";
+        UserDao userDao = new UserDao(ds);
+        assertThat(userDao.userNotInDb(userInDb)).isFalse();
+    }
+
+
 }

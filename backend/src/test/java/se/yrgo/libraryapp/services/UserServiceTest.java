@@ -39,4 +39,20 @@ public class UserServiceTest {
         assertThat(userService.validate(username,
                 password)).isEqualTo(Optional.of(id));
     }
+
+    @Test
+    void correctRegister() {
+        final String username = "testuser";
+        final String realname = "bosse";
+        final String password = "password";
+
+        final PasswordEncoder encoder = org.springframework.security.crypto.password.NoOpPasswordEncoder.getInstance();
+
+        String passwordHash = encoder.encode(password);
+
+        when(userDao.persistUser(username, realname, passwordHash)).thenReturn(true);
+
+        UserService userService = new UserService(userDao, encoder);
+        assertThat(userService.register(username, realname, password)).isTrue();
+    }
 }
