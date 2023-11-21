@@ -55,7 +55,6 @@
           <entry name="$MAVEN_REPOSITORY$/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.6.2/kotlinx-coroutines-core-jvm-1.6.2.jar" />
           <entry name="$MAVEN_REPOSITORY$/io/swagger/core/v3/swagger-annotations/2.2.0/swagger-annotations-2.2.0.jar" />
         </processorPath>
-        <module name="libraryapp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
