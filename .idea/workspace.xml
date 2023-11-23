@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26f5e262-21f5-4214-b03f-e8c407cf6625" name="Changes" comment="" />
+    <list default="true" id="26f5e262-21f5-4214-b03f-e8c407cf6625" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docker/build.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/docker/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/knutb/OneDrive/Skrivbord/JAVA22/testing_and_security/ts_library/backend",
+    "last_opened_file_path": "C:/Users/knutb/OneDrive/Skrivbord/JAVA22/testing_and_security/ts_library",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -123,6 +130,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="ts_library" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="ts_library" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UtilsTest" />
@@ -142,6 +162,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700495100728</updated>
       <workItem from="1700495101938" duration="2352000" />
+      <workItem from="1700746432288" duration="39000" />
     </task>
     <servers />
   </component>
