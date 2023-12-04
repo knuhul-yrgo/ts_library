@@ -5,27 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0106fbd3-e9d5-4f12-a34a-83ad978c2ae3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../mysql/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mysql/.idea/sonarlint/issuestore/1/9/19b38c57e8c84e66e7cc643050626dcbe9bd1c12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mysql/.idea/sonarlint/issuestore/6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mysql/.idea/sonarlint/securityhotspotstore/1/9/19b38c57e8c84e66e7cc643050626dcbe9bd1c12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mysql/.idea/sonarlint/securityhotspotstore/6/6/6651ddff6eb82c840ced7c1dddee15c6e1913dd4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/entrypoint.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/test/resources/db/migration/V1.0.1656415572__books_test_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/test/resources/db/migration/V1.0.1656415572__books_test_data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../docker/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../docker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../docker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/se/yrgo/integrations/SearchStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/yrgo/integrations/SearchStepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/se/yrgo/integrations/pos/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/yrgo/integrations/pos/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/se/yrgo/integrations/pos/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/yrgo/integrations/pos/StartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/se/yrgo/integrations/search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/se/yrgo/integrations/search.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/se/yrgo/integrations/SearchStepDefinitions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/se/yrgo/integrations/SearchStepDefinitions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/se/yrgo/integrations/pos/SearchPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/se/yrgo/integrations/pos/SearchPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/se/yrgo/integrations/search.feature" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/se/yrgo/integrations/search.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mysql/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../mysql/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mysql/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/../mysql/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mysql/setup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../mysql/setup.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
