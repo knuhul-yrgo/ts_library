@@ -21,4 +21,5 @@ public class StartPage {
         wait.until(CustomConditions.elementHasBeenClicked(searchLink));
         return new SearchPage(driver);
     }
+
 }

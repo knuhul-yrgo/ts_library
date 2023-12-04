@@ -16,7 +16,8 @@ VALUES
 INSERT INTO book_edition
 VALUES
     ('9781509302000', 'T-SQL Fundamentals', 'Itzik Ben-Gan', 5),
-    ('9789129697285', 'Här kommer Pippi Långstrump', 'Astrid Lindgren', 898);
+    ('9789129697285', 'Här kommer Pippi Långstrump', 'Astrid Lindgren', 898),
+    ('9789129697287', 'Nya hyss av Emil i Lönneberga', 'Astrid Lindgren', 898);
 
 INSERT INTO book (isbn)
 VALUES
@@ -24,7 +25,8 @@ VALUES
     ('9781509302000'),
     ('9789129697285'),
     ('9789129697285'),
-    ('9789129697285');
+    ('9789129697285'),
+    ('9789129697287');
 
 INSERT INTO book_loan
 VALUES
