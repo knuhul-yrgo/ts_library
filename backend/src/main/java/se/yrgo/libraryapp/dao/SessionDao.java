@@ -1,6 +1,7 @@
 package se.yrgo.libraryapp.dao;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -46,16 +47,20 @@ public class SessionDao {
     }
 
     public UserId validate(UUID session) {
-        try (Connection conn = ds.getConnection();
-                Statement stmt = conn.createStatement();
-                ResultSet rs = stmt.executeQuery("SELECT user_id, created FROM session WHERE id = '"
-                        + session.toString() + "'")) {
+        String query = "SELECT user_id, created FROM session WHERE id = ?";
 
-            if (rs.next()) {
-                int userId = rs.getInt("user_id");
-                Timestamp timestamp = rs.getTimestamp("created");
-                validateExpiration(timestamp);
-                return UserId.of(userId);
+        try (Connection conn = ds.getConnection();
+             PreparedStatement ps = conn.prepareStatement(query)) {
+
+            ps.setString(1, session.toString());
+
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
+                    int userId = rs.getInt("user_id");
+                    Timestamp timestamp = rs.getTimestamp("created");
+                    validateExpiration(timestamp);
+                    return UserId.of(userId);
+                }
             }
         } catch (SQLException ex) {
             throw new CredentialsException("Unable to validate session", ex);
