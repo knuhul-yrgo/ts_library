@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0106fbd3-e9d5-4f12-a34a-83ad978c2ae3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mysql/.idea/aws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mysql/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mysql/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mysql/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mysql/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mysql/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -27,7 +27,7 @@ public class UserDaoTest {
     private Connection conn;
 
     @Mock
-    private Statement stmt;
+    private PreparedStatement ps;
 
     @Mock
     private ResultSet rs;
@@ -38,11 +38,12 @@ public class UserDaoTest {
         final String username = "testuser";
         final String realname = "bosse";
         final String passwordHash = "xxx";
+        final String query = "SELECT id, realname, password_hash FROM user WHERE user = ?";
         final User expectedUser = new User(id, username, realname, passwordHash);
 
         when(ds.getConnection()).thenReturn(conn);
-        when(conn.createStatement()).thenReturn(stmt);
-        when(stmt.executeQuery(contains(username))).thenReturn(rs);
+        when(conn.prepareStatement(query)).thenReturn(ps);
+        when(ps.executeQuery()).thenReturn(rs);
         when(rs.next()).thenReturn(true, false);
         when(rs.getInt("id")).thenReturn(id.getId());
         when(rs.getString("realname")).thenReturn(realname);
@@ -55,9 +56,10 @@ public class UserDaoTest {
     @Test
     void getNonExistingUser() throws SQLException {
         final String username = "testuser";
+        final String query = "SELECT id, realname, password_hash FROM user WHERE user = ?";
         when(ds.getConnection()).thenReturn(conn);
-        when(conn.createStatement()).thenReturn(stmt);
-        when(stmt.executeQuery(contains(username))).thenReturn(rs);
+        when(conn.prepareStatement(query)).thenReturn(ps);
+        when(ps.executeQuery()).thenReturn(rs);
         when(rs.next()).thenReturn(false);
         UserDao userDao = new UserDao(ds);
         assertThat(userDao.get(username)).isEmpty();
