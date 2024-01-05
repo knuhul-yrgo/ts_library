@@ -29,7 +29,7 @@ public class LoginController {
     private SessionDao sessionDao;
 
     @Inject
-    LoginController(RoleDao roleDao, UserDao userDao, SessionDao sessionDao) {
+    LoginController(RoleDao roleDao, UserService userService, SessionDao sessionDao) {
         this.userService = userService;
         this.roleDao = roleDao;
         this.sessionDao = sessionDao;
